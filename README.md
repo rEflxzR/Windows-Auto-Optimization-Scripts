@@ -6,7 +6,7 @@ The Scripts dont cause any Harm to your system neither Reduce it's Functionality
 
 # Steps to Use:
 1. Download the Archive
-2. Extract it to a Location you Remeber
+2. Extract it to a Location you Remember
 3. Open A Powershell on your system with Admin Priviledges
 4. Type 'Set-ExecutionPolicy Unrestricted' and Hit Enter (Select 'Yes to All' in the Subsequent prompt)
 5. Navigate to the Folder where you Extracted WNDOPT3R and goto 'PS SCRIPTS' Folder
