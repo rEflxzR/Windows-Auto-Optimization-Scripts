@@ -1,12 +1,30 @@
 ########################################################## DISK CLEANUP #############################################################
+cls
 Write-Output "`n`n 1) PREPARING TO CLEAN YOUR SYSTEM"
 Start-Sleep -Seconds 3
 
 cleanmgr /verylowdisk
 Wait-Process "cleanmgr"
 
+########################################################## DISK CLEANUP #############################################################
+cls
+Write-Output "`n`n 2) WARNING !!!!  We Are going to DEFRAG Your Disk"
+Write-Output "`tYou Should SKIP this STEP if you are using an SSD(Solid State Drive)`n"
+$res = Read-Host -Prompt "`nContinue ? [N for No]"
+if (($res -ne 'N') -or ($res -ne 'n'))
+{
+    Write-Output "`n`n Initailizing DEFRAGGLER"
+    Start-Sleep -Seconds 3
+    Defrag /C /U /H
+    Wait-Process "Defrag"
+}
+else {
+
+}
+
 ################################################## SYSTEM FILE INTEGRITY CHECK ######################################################
-Write-Output "`n`n` 2) Starting SYSTEM INTEGRITY CHECK"
+cls
+Write-Output "`n`n` 3) Starting SYSTEM INTEGRITY CHECK"
 Start-Sleep -Seconds 2
 sfc /scannow | Out-Null
 
