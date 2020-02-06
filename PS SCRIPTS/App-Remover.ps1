@@ -59,7 +59,8 @@ foreach($package in $packages)
 Start-Sleep -Seconds 4
 
 ############################################### Disabling APP AutoUpdater ##########################################################
-Write-Output "`n`n 2) Tweaking Settings......`n"
+cls
+Write-Output "`n`n 2) Tweaking App Settings......`n"
 Start-Sleep -Seconds 3
 New-Item -Path 'HKLM:\SOFTWARE\Policies\Microsoft\WindowsStore' -ItemType Directory -Force | Out-Null
 New-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\WindowsStore' -Name AutoDownload -Value 2 -PropertyType DWord | Out-Null
@@ -78,7 +79,7 @@ $cdm = @(
 )
 
 New-Item -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager' -ItemType Directory -Force | Out-Null
-
+Start-Sleep -Seconds 1
 foreach($ele in $cdm)
 {
     New-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager' -Name "$ele" -Value 0 -PropertyType DWord -Force | Out-Null

@@ -5,13 +5,15 @@ Sleep -Seconds 3
 Set-ItemProperty -Path 'HKLM:\SYSTEM\ControlSet001\Control\Power\PowerSettings\0012ee47-9041-4b5d-9b77-535fba8b1442\51dea550-bb38-4bc4-991b-eacf37be5ec8\' -Name ValueMax -Value 0 | Out-Null
 Set-ItemProperty -Path 'HKLM:\SYSTEM\ControlSet001\Control\Power\PowerSettings\0012ee47-9041-4b5d-9b77-535fba8b1442\51dea550-bb38-4bc4-991b-eacf37be5ec8\' -Name ValueMin -Value 0 | Out-Null
 
-#######################################  ##### ADJUSTING WINDOWS APPEARANCE ####################################################
+############################################## ADJUSTING WINDOWS APPEARANCE ######################################################
+cls
 Write-Output "`n`n 2) ADJUSTING APPEARANCE FOR BEST PERFORMANCE"
 Sleep -Seconds 3
 
 Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects' -Name VisualFXSetting -Value 2 | Out-Null
 
 ########################################### ADJUSTING DEFENDERS SCHEDULED SCAN ####################################################
+cls
 Write-Output "`n`n 3) TWEAKING Windows Defender Scheduled Scan"
 Sleep -Seconds 3
 

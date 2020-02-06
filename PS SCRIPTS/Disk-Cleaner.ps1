@@ -1,12 +1,11 @@
 ########################################################## DISK CLEANUP #############################################################
-cls
 Write-Output "`n`n 1) PREPARING TO CLEAN YOUR SYSTEM"
 Start-Sleep -Seconds 3
 
 cleanmgr /verylowdisk
 Wait-Process "cleanmgr"
 
-########################################################## DISK CLEANUP #############################################################
+########################################################## DISK DEFRAG #############################################################
 cls
 Write-Output "`n`n 2) WARNING !!!!  We Are going to DEFRAG Your Disk"
 Write-Output "`tYou Should SKIP this STEP if you are using an SSD(Solid State Drive)`n"

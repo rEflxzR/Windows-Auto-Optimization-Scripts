@@ -36,6 +36,7 @@ foreach($service in $services)
 }
 
 ################################################# DISABLE BACKGROUND APPS #########################################################
+cls
 Write-Output "`n`n 2) Disabling BACKGROUND APPS"
 
 New-Item -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy' -ItemType Directory -Force | Out-Null
@@ -46,6 +47,7 @@ New-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Backgrou
 New-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Search' -Name BackgroundAppGlobalToggle -Value 1 -PropertyType DWord -Force | Out-Null
 
 ################################################## DISABLE STARTUP APPS ###########################################################
+cls
 Write-Output "`n`n 3) Disabling Startup APPS"
 
 Remove-Item -Path 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Run\*' -Force | Out-Null
@@ -56,6 +58,7 @@ Remove-Item -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Run\*' -Force
 Remove-Item -Path 'HKLM:\Software\Microsoft\Windows\CurrentVersion\RunOnce\*' -Force | Out-Null
 
 #################################################### DISABLE CORTANA ##############################################################
+cls
 Write-Output "`n`n 4) Trying to Disable CORTANA"
 Sleep -Seconds 3
 
@@ -63,6 +66,7 @@ New-Item -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search' -ItemT
 New-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search' -Name AllowCortana -Value 0 -PropertyType DWord -Force | Out-Null
 
 ############################################### DISABLE LIVE TILE NOTIFICATION ####################################################
+cls
 Write-Output "`n`n 5) Disabling Live Tile Notification"
 Sleep -Seconds 3
 
