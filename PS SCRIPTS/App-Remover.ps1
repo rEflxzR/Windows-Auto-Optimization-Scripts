@@ -55,8 +55,9 @@ Write-Output "`n`n 1) Uinstalling APPS from System"
 foreach($package in $packages)
 {
     Get-AppxPackage -Name $package | Remove-AppxPackage | Out-Null
+    Start-Sleep -Seconds 5
 }
-Start-Sleep -Seconds 4
+Start-Sleep -Seconds 2
 
 ############################################### Disabling APP AutoUpdater ##########################################################
 cls
@@ -83,5 +84,6 @@ Start-Sleep -Seconds 1
 foreach($ele in $cdm)
 {
     New-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager' -Name "$ele" -Value 0 -PropertyType DWord -Force | Out-Null
+    Start-Sleep -Seconds 2
 }
 Write-Output "`n  ALL DONE !!!`n"
