@@ -12,7 +12,7 @@ Write-Output "`tYou Should SKIP this STEP if you are using an SSD(Solid State Dr
 $res = Read-Host -Prompt "`nContinue ? [N for No]"
 if (($res -ne 'N') -or ($res -ne 'n'))
 {
-    Write-Output "`n`n Initailizing DEFRAGGLER"
+    Write-Output "`n`n Initailizing DEFRAGGLER`n"
     Start-Sleep -Seconds 3
     Defrag /C /U /H
     Wait-Process "Defrag"
@@ -25,7 +25,7 @@ else {
 cls
 Write-Output "`n`n` 3) Starting SYSTEM INTEGRITY CHECK"
 Start-Sleep -Seconds 2
-sfc /scannow | Out-Null
+sfc /scannow
 
 if(${?} -eq $False)
 {
