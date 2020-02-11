@@ -6,6 +6,7 @@ $response  = Read-Host -Prompt "PROCEED [N/n for No]??? : "
 if(($response -ne 'N') -or ($response -ne 'n'))
 {
     $p = 'SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{025A5937-A6BE-4686-A844-36FE4BEC8B6D}'
+    Start-Sleep -Seconds 1
     Set-ItemProperty -Path "HKLM:\$p" -Name PreferredPlan -Value '8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c'
     Write-Output "`n  ALL DONE !!!`n"
 }
