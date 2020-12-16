@@ -1,8 +1,4 @@
-# WND0PT3R - Your Friendly Windows Doctor
-
-Yeah I Know, Nothing Frustates more (Atleast for me) than Slow system responses. That's where WND0PT3R comes to the Rescue :-)
-These bunch of Scripts helps your System to get Slim and Trim after it becomes bulky from Every Windows Feature Update.
-The Scripts dont cause any Harm to your system neither Reduce it's Functionality
+# WINDOWS OPTIMIZATION SCRIPTS
 
 # Steps to Use:
 1. Download or Clone the Repository
